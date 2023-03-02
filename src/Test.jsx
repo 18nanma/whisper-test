@@ -39,14 +39,13 @@ async function fetchRemote(url, cbProgress, cbPrint) {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/octet-stream',
-                'Access-Control-Allow-Origin': '*',
                 'Cross-Origin-Embedder-Policy': 'require-corp',
                 'Cross-Origin-Opener-Policy': 'same-origin',
-                'Access-Control-Allow-Headers': "Origin, X-Requested-With, Content-Type, Accept, Authorization"
               },
             
         }
     );
+
 
     if (!response.ok) {
         cbPrint('fetchRemote: failed to fetch ' + url);

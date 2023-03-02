@@ -40,7 +40,6 @@ async function fetchRemote(url, cbProgress, cbPrint) {
             headers: {
                 'Content-Type': 'application/octet-stream',
                 'Cross-Origin-Embedder-Policy': 'require-corp',
-                'Cross-Origin-Opener-Policy': 'same-origin',
               },
             
         }

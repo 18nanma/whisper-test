@@ -2,6 +2,32 @@ import { useEffect, useRef } from "react";
 
 function Htm(props) {
     const divRef = useRef();
+
+    useEffect(() => {
+        const script = document.createElement('script');
+      
+        script.src = "whisper2/public/stream.js";
+        script.async = true;
+      
+        document.body.appendChild(script);
+      
+        return () => {
+          document.body.removeChild(script);
+        }
+      }, []);
+
+      useEffect(() => {
+        const script = document.createElement('script');
+      
+        script.src = "whisper2/public/libstream.worker.js";
+        script.async = true;
+      
+        document.body.appendChild(script);
+      
+        return () => {
+          document.body.removeChild(script);
+        }
+      }, []);
   
     const htmlString = `
             <button id="fetch-whisper-tiny-en" onclick="loadWhisper('tiny.en')">tiny.en (75 MB)</button>

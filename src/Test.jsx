@@ -14,7 +14,6 @@ function Htm(props) {
             </div>
             <textarea id="output" rows="20" style="width: 100%;"></textarea>
             
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.0.0/umd/react.production.min.js"></script>
       <script>
 
       function convertTypedArray(src, type) {

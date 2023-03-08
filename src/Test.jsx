@@ -267,7 +267,7 @@ function loadRemote(url, dst, size_mb, cbProgress, cbReady, cbCancel, cbPrint) {
 
       function loadWhisper(model) {
         let urls = {
-            'tiny.en': 'https://angrave.web.engr.illinois.edu/scribear/data/ggml-model-whisper-tiny.en.bin'        
+            'tiny.en': 'https://cors-anywhere.herokuapp.com/https://whisper.ggerganov.com/ggml-model-whisper-tiny.en.bin'        
         };
 
         let sizes = {

@@ -151,6 +151,8 @@ function loadRemote(url, dst, size_mb, cbProgress, cbReady, cbCancel, cbPrint) {
                             var os = tx.objectStore('models');
                             var rq = os.put(data, url);
 
+                            console.log("success storing data")
+
                             rq.onsuccess = function (event) {
                                 cbPrint('loadRemote: "' + url + '" stored in the IndexedDB');
                                 cbReady(dst, data);
@@ -161,6 +163,8 @@ function loadRemote(url, dst, size_mb, cbProgress, cbReady, cbCancel, cbPrint) {
                                 cbCancel();
                             };
                         };
+                    } else {
+                        console.log("no data")
                     }
                 });
             }

@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/whisper-test/static/css/main.073c9b0a.css",
-    "main.js": "/whisper-test/static/js/main.39055a36.js",
+    "main.js": "/whisper-test/static/js/main.89e1495e.js",
     "static/js/787.ead9e868.chunk.js": "/whisper-test/static/js/787.ead9e868.chunk.js",
     "index.html": "/whisper-test/index.html",
     "main.073c9b0a.css.map": "/whisper-test/static/css/main.073c9b0a.css.map",
-    "main.39055a36.js.map": "/whisper-test/static/js/main.39055a36.js.map",
+    "main.89e1495e.js.map": "/whisper-test/static/js/main.89e1495e.js.map",
     "787.ead9e868.chunk.js.map": "/whisper-test/static/js/787.ead9e868.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.39055a36.js"
+    "static/js/main.89e1495e.js"
   ]
 }

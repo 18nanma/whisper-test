@@ -219,7 +219,7 @@ function loadRemote(url, dst, size_mb, cbProgress, cbReady, cbCancel, cbPrint) {
       // model name
       var model_whisper = null;
 
-      var Module = {
+      var Modulee = {
         print: printTextarea,
         printErr: printTextarea,
         setStatus: function(text) {
@@ -252,7 +252,7 @@ function loadRemote(url, dst, size_mb, cbProgress, cbReady, cbCancel, cbPrint) {
               // ignore
           }
 
-          // Module.FS_createDataFile("/", fname, buf, true, true);
+          Module.FS_createDataFile("/", fname, buf, true, true);
 
           printTextarea('storeFS: stored model: ' + fname + ' size: ' + buf.length);
 
@@ -263,7 +263,6 @@ function loadRemote(url, dst, size_mb, cbProgress, cbReady, cbCancel, cbPrint) {
               document.getElementById('stop' ).disabled = true;
           }
       }
-
 
       function loadWhisper(model) {
         let urls = {

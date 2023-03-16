@@ -6,7 +6,7 @@ function Htm(props) {
     useEffect(() => {
         const script = document.createElement('script');
       
-        script.src = "whisper2/public/stream.js";
+        script.src = "/public/stream.js";
         script.async = true;
       
         document.body.appendChild(script);
@@ -19,7 +19,7 @@ function Htm(props) {
       useEffect(() => {
         const script = document.createElement('script');
       
-        script.src = "whisper2/public/libstream.worker.js";
+        script.src = "/public/libstream.worker.js";
         script.async = true;
       
         document.body.appendChild(script);

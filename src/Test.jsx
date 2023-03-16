@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 function Htm(props) {
     const divRef = useRef();
-    
+
     const htmlString = `
             <button id="fetch-whisper-tiny-en" onclick="loadWhisper('tiny.en')">tiny.en (75 MB)</button>
             <button id="start"  onclick="onStart()" disabled>Start</button>
@@ -252,7 +252,7 @@ function loadRemote(url, dst, size_mb, cbProgress, cbReady, cbCancel, cbPrint) {
               // ignore
           }
 
-          Module.FS_createDataFile("/", fname, buf, true, true);
+          // Module.FS_createDataFile("/", fname, buf, true, true);
 
           printTextarea('storeFS: stored model: ' + fname + ' size: ' + buf.length);
 

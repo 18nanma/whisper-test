@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
 
 function Htm(props) {
-  
+    const divRef = useRef();
+    
     const htmlString = `
             <button id="fetch-whisper-tiny-en" onclick="loadWhisper('tiny.en')">tiny.en (75 MB)</button>
             <button id="start"  onclick="onStart()" disabled>Start</button>

@@ -1,6 +1,6 @@
 {
   "homepage": "https://18nanma.github.io/whisper-test",
-  "name": "whisper2",
+  "name": "whisper-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

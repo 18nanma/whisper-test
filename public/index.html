@@ -46,13 +46,36 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
             
-    <div id="input" style='z-index: 100000;'>
-      <button id="start"  onclick="onStart()" disabled style='z-index: 100000; '>Start</button>
-      <button id="stop"   onclick="onStop()" disabled style='z-index: 100000;'>Stop</button>
-      <button id="clear"  onclick="clearCache()" style='z-index: 100000; '>Clear Cache</button>
+    <div id="model-whisper">
+      Whisper model: <span id="model-whisper-status"></span>
+      <button id="fetch-whisper-tiny-en" onclick="loadWhisper('tiny.en')">tiny.en (75 MB)</button>
+      <button id="fetch-whisper-base-en" onclick="loadWhisper('base.en')">base.en (142 MB)</button>
+      <span id="fetch-whisper-progress"></span>
+
+      <!--
+          <input type="file" id="file" name="file" onchange="loadFile(event, 'whisper.bin')" />
+      -->
   </div>
-  <textarea id="output" rows="20"></textarea>
-  <button id="fetch-whisper-tiny-en" onclick="loadWhisper('tiny.en')" style='z-index: 10000;'>tiny.en (75 MB)</button>
+
+  <br>
+
+  <div id="input">
+      <button id="start"  onclick="onStart()" disabled>Start</button>
+      <button id="stop"   onclick="onStop()" disabled>Stop</button>
+      <button id="clear"  onclick="clearCache()">Clear Cache</button>
+  </div>
+
+  <br>
+
+  <div id="state">
+      Status: <b><span id="state-status">not started</span></b>
+
+      <pre id="state-transcribed">[The transcribed text will be displayed here]</pre>
+  </div>
+
+  Debug output:
+            <textarea id="output" rows="20"></textarea>
+
    
 
   <div id="root"></div>

@@ -86,7 +86,7 @@ async function fetchRemote(url, cbProgress, cbPrint) {
 
     return chunksAll;
 }
-
+// 
 // load remote data
 // - check if the data is already in the IndexedDB
 // - if not, fetch it from the remote URL and store it in the IndexedDB

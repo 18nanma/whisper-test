@@ -7,6 +7,20 @@ import Iframe from 'react-iframe'
 function App() {
   const [isTrue, setIsTrue] = useState(false);
 
+  const [sessionText, setSessionText] = useState(sessionStorage.getItem('myText') || '');
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setSessionText(sessionStorage.getItem('myText') || '');
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
+  }, []);
+
   const handleClick = () => {
     setIsTrue(prevIsTrue => !prevIsTrue);
     sessionStorage.setItem('isTrue', !isTrue);
@@ -24,6 +38,10 @@ function App() {
         position="relative"/>
         
         <button onClick={handleClick}>Toggle</button>
+
+        <div>
+          <p>{sessionText}</p>
+        </div>
 
       </header>
     </div>

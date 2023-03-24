@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         
-      <Iframe url="https://18nanma.github.io/whisper/"
+      <Iframe url="https://18nanma.github.io/whisper"
         width="640px"
         height="320px"
         id=""

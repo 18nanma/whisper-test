@@ -5,6 +5,12 @@ import Iframe from 'react-iframe'
 
 
 function App() {
+  const [isTrue, setIsTrue] = useState(false);
+
+  const handleClick = () => {
+    setIsTrue(prevIsTrue => !prevIsTrue);
+    sessionStorage.setItem('isTrue', !isTrue);
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -16,9 +22,9 @@ function App() {
         className=""
         display="block"
         position="relative"/>
-        {/* <Htm/> */}
-        Hello
         
+        <button onClick={handleClick}>Toggle</button>
+
       </header>
     </div>
   );

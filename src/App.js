@@ -10,6 +10,7 @@ function App() {
   const [sessionText, setSessionText] = useState(sessionStorage.getItem('myText') || '');
 
   useEffect(() => {
+    console.log("getting text")
     const handleStorageChange = () => {
       setSessionText(sessionStorage.getItem('myText') || '');
     };
@@ -22,6 +23,7 @@ function App() {
   }, []);
 
   const handleClick = () => {
+    console.log("clicked")
     setIsTrue(prevIsTrue => !prevIsTrue);
     sessionStorage.setItem('isTrue', !isTrue);
   };

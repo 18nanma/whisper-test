@@ -6,7 +6,8 @@ import Iframe from 'react-iframe'
 
 function App() {
   const [isTrue, setIsTrue] = useState(false);
-
+  const [isClearCache, setIsClearCache] = useState(false);
+  const [isDownloadTiny, setIsDownloadTiny] = useState(false);
   const [sessionText, setSessionText] = useState(sessionStorage.getItem('myText') || '');
 
   useEffect(() => {
@@ -22,11 +23,24 @@ function App() {
     };
   }, []);
 
-  const handleClick = () => {
+  const handleClickToggle = () => {
     console.log("clicked")
     setIsTrue(prevIsTrue => !prevIsTrue);
     sessionStorage.setItem('isTrue', !isTrue);
   };
+
+  const handleClickClearCache = () => {
+    console.log("clicked cache")
+    setIsClearCache(prevIsClearCache => !prevIsClearCache);
+    sessionStorage.setItem('isClearCache', !isClearCache);
+  };
+
+  const handleClickDownloadTiny = () => {
+    console.log("clicked download tiny")
+    setIsDownloadTiny(prevIsDownloadTiny => !prevIsDownloadTiny);
+    sessionStorage.setItem('isDownloadTiny', !isDownloadTiny);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -39,10 +53,12 @@ function App() {
         display="block"
         position="relative"/>
         
-        <button onClick={handleClick}>Toggle</button>
+        <button onClick={handleClickToggle}>Toggle</button>
+        <button onClick={handleClickClearCache}>Clear Cache</button>
+        <button onClick={handleClickDownloadTiny}>download Tiny model</button>
 
         <div>
-          <p>{sessionText}</p>
+          <pre>{sessionText}</pre>
         </div>
 
       </header>

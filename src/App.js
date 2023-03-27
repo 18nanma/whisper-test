@@ -59,7 +59,7 @@ function App() {
         <button onClick={handleClickDownloadTiny}>download Tiny model</button>
 
         <div>
-          <p style="min-width: 100%; width: 0;">{sessionText}</p>
+          <p>{sessionText}</p>
         </div>
 
       </header>

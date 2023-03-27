@@ -20,7 +20,6 @@ function App() {
 
     window.addEventListener('storage', handleStorageChange);
 
-    
     handleClickDownloadTiny();
 
     return () => {

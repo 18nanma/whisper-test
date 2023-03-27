@@ -21,6 +21,8 @@ function App() {
     return () => {
       window.removeEventListener('storage', handleStorageChange);
     };
+
+    handleClickDownloadTiny();
   }, []);
 
 

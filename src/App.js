@@ -17,6 +17,8 @@ function App() {
     };
 
     handleClickDownloadTiny();
+    handleClickDownloadTiny();
+    handleClickDownloadTiny();
 
     window.addEventListener('storage', handleStorageChange);
 

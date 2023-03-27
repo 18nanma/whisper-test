@@ -17,10 +17,10 @@ function App() {
     };
 
     handleClickDownloadTiny();
-    handleClickDownloadTiny();
-    handleClickDownloadTiny();
 
     window.addEventListener('storage', handleStorageChange);
+
+    handleClickDownloadTiny();
 
     return () => {
       window.removeEventListener('storage', handleStorageChange);

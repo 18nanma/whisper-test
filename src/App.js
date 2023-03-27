@@ -23,6 +23,7 @@ function App() {
     };
   }, []);
 
+
   const handleClickToggle = () => {
     console.log("clicked")
     setIsTrue(prevIsTrue => !prevIsTrue);
@@ -40,7 +41,7 @@ function App() {
     setIsDownloadTiny(prevIsDownloadTiny => !prevIsDownloadTiny);
     sessionStorage.setItem('isDownloadTiny', !isDownloadTiny);
   };
-
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -58,7 +59,7 @@ function App() {
         <button onClick={handleClickDownloadTiny}>download Tiny model</button>
 
         <div>
-          <pre>{sessionText}</pre>
+          <p style="min-width: 100%; width: 0;">{sessionText}</p>
         </div>
 
       </header>

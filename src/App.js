@@ -16,13 +16,13 @@ function App() {
       setSessionText(sessionStorage.getItem('myText') || '');
     };
 
+    handleClickDownloadTiny();
+
     window.addEventListener('storage', handleStorageChange);
 
     return () => {
       window.removeEventListener('storage', handleStorageChange);
     };
-
-    handleClickDownloadTiny();
   }, []);
 
 

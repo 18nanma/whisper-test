@@ -21,6 +21,8 @@ function App() {
     window.addEventListener('storage', handleStorageChange);
 
     // handleClickDownloadTiny();
+    setIsDownloadTiny(false);
+    sessionStorage.setItem('isDownloadTiny', isDownloadTiny);
 
     return () => {
       window.removeEventListener('storage', handleStorageChange);

@@ -27,6 +27,20 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    // Add event listener to window object
+    window.addEventListener("beforeunload", clearSessionStorage);
+
+    // Remove event listener when component unmounts
+    return () => {
+      window.removeEventListener("beforeunload", clearSessionStorage);
+    };
+  }, []);
+
+  const clearSessionStorage = () => {
+    sessionStorage.clear();
+  };
+
 
   const handleClickToggle = () => {
     console.log("clicked")

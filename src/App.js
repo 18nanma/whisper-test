@@ -16,7 +16,7 @@ function App() {
       setSessionText(sessionStorage.getItem('myText') || '');
     };
 
-    handleClickDownloadTiny();
+    // handleClickDownloadTiny();
 
     window.addEventListener('storage', handleStorageChange);
 

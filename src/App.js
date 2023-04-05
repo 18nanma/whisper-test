@@ -20,7 +20,7 @@ function App() {
 
     window.addEventListener('storage', handleStorageChange);
 
-    handleClickDownloadTiny();
+    // handleClickDownloadTiny();
 
     return () => {
       window.removeEventListener('storage', handleStorageChange);
@@ -29,11 +29,11 @@ function App() {
 
   useEffect(() => {
     // Add event listener to window object
-    window.addEventListener("beforeunload", clearSessionStorage);
+    window.addEventListener("onbeforeunload", clearSessionStorage);
 
     // Remove event listener when component unmounts
     return () => {
-      window.removeEventListener("beforeunload", clearSessionStorage);
+      window.removeEventListener("onbeforeunload", clearSessionStorage);
     };
   }, []);
 
